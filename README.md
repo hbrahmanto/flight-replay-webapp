@@ -14,3 +14,15 @@ Some key features:
 * Telemetry data are shown of the flight
 * Playback controls
 * Flight map
+
+File Structures:
+Frontend (src/)
+* components/: Contains React components such as: map, telemetry panel, replay panel
+* App.jsx: Main application component, handles the logic for the playback option and state management
+* api.js: Functions for handling the API calls and file upload
+* helpers.js: Helper functions for utility purposes
+* index.js: Entry point for the react app
+
+Backend
+* parse_tlog.py: Connects the tlog file using mavutil.mavlink_connection, parses the flight data
+* main.py: FastAPI, parsed data is returned as a JSON response using JSONResponse
